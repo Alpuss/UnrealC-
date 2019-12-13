@@ -1,0 +1,2 @@
+E:\studia\programowanie\unrealc++\UnrealC++\section\Intermediate\Build\Win64\UE4Editor\Development\section\Definitions.section.h
+E:\studia\programowanie\unrealc++\UnrealC++\section\Source\section\section.h

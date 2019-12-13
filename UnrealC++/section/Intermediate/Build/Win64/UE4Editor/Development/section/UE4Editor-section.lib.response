@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-section.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\studia\programowanie\unrealc++\UnrealC++\section\Intermediate\Build\Win64\sectionEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"E:\studia\programowanie\unrealc++\UnrealC++\section\Intermediate\Build\Win64\UE4Editor\Development\section\section.cpp.obj"
+"E:\studia\programowanie\unrealc++\UnrealC++\section\Intermediate\Build\Win64\UE4Editor\Development\section\sectionGameModeBase.cpp.obj"
+"E:\studia\programowanie\unrealc++\UnrealC++\section\Intermediate\Build\Win64\UE4Editor\Development\section\section.init.gen.cpp.obj"
+"E:\studia\programowanie\unrealc++\UnrealC++\section\Intermediate\Build\Win64\UE4Editor\Development\section\sectionGameModeBase.gen.cpp.obj"
+"E:\studia\programowanie\unrealc++\UnrealC++\section\Intermediate\Build\Win64\UE4Editor\Development\section\Default.rc2.res"
+/OUT:"E:\studia\programowanie\unrealc++\UnrealC++\section\Intermediate\Build\Win64\UE4Editor\Development\section\UE4Editor-section.lib"
+/INCLUDE:IMPLEMENT_MODULE_section
