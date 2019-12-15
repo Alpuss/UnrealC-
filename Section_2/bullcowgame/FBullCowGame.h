@@ -2,6 +2,7 @@
 #include <string>
 class FBullCowGame {
 public:
+	FBullCowGame(); // constructor
 	void Reset(); // TODO make a more rich return value
 	int GetMaxTries()const;
 	int GetCurrentTry();
