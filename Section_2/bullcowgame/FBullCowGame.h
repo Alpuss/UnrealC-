@@ -13,6 +13,6 @@ public:
 
 	//pls try ignore this 
 private:
-	int MyCurrentTry = 1;
-	int MyMaxTries = 5;
+	int MyCurrentTry;
+	int MyMaxTries;
 };
