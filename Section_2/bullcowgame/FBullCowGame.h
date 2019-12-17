@@ -1,6 +1,8 @@
+//game logic
+
 #pragma once
 #include <string>
-using FString = std::string;
+using FString = std::string; //to make the syntax unreal friendly
 using int32 = int;
 
 struct FBullCowCount {
@@ -16,9 +18,9 @@ enum class EGuessStatus {
 	Not_Lowercase
 };
 
-class FBullCowGame {
+class FBullCowGame { //constructor
 public:
-	FBullCowGame(); // constructor
+	FBullCowGame(); 
 	
 	int32 GetMaxTries()const;
 	int32 GetCurrentTry() const;
