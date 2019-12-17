@@ -6,7 +6,7 @@ using FText = std::string;
 using int32 = int;
 
 void PrintIntro();
-FText GetGuess();
+FText GetValidGuess();
 void PlayGame();
 bool AskToPlayAgain();
 
@@ -38,22 +38,30 @@ void PlayGame() {
 		//loop
 
 		for (int32 count = 1; count <= MaxTries; count++) {
-			FText Guess = GetGuess();
+			FText Guess = GetValidGuess();
+
+			
+			}
 			std::cout << std::endl;
 			FBullCowCount BullCowCount = BCGame.SubmitGuess(Guess);
 			std::cout << "Bulls = " << BullCowCount.Bulls;
-			std::cout << " Cows = " << BullCowCount.Cows << std::endl;
-			std::cout << std::endl;
+			std::cout << " Cows = " << BullCowCount.Cows << "\n\n";
 		}
 	}
-FText GetGuess()
+FText GetValidGuess()
 {
 	int32 CurrentTry = BCGame.GetCurrentTry();
 	//get a guess from the player
 	std::cout << "Try " << CurrentTry << " Enter your guess: ";
 	FText Guess = "";
 	std::getline(std::cin, Guess);
-	return Guess;
+
+	EGuessStatus Status = BCGame.CheckGuessValidity(Guess);
+	switch (Status) {
+	case EGuessStatus::Wrong_Length:
+		std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << " letter word.\n";
+		break;
+	default:
 }
 bool AskToPlayAgain()
 	{
