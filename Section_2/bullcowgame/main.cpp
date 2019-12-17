@@ -25,9 +25,8 @@ int main()
 void PrintIntro()
 {
 	//przedstawienie gru
-	constexpr int32 WORLD_LENGTH = 5;
 	std::cout << "Welcome to Bulls and Cows, a fun word game\n";
-	std::cout << "Can you guess the " << WORLD_LENGTH;
+	std::cout << "Can you guess the " << BCGame.GetHiddenWordLength();
 	std::cout << " letter isogram I'm thinking of?\n";
 	std::cout << std::endl;
 	return;
@@ -41,8 +40,9 @@ void PlayGame() {
 		for (int32 count = 1; count <= MaxTries; count++) {
 			FText Guess = GetGuess();
 			std::cout << std::endl;
-
-			std::cout << "Your guess was: " << Guess << std::endl;
+			FBullCowCount BullCowCount = BCGame.SubmitGuess(Guess);
+			std::cout << "Bulls = " << BullCowCount.Bulls;
+			std::cout << " Cows = " << BullCowCount.Cows << std::endl;
 			std::cout << std::endl;
 		}
 	}
